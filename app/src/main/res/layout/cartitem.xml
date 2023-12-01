@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+
+
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.cardview.widget.CardView
+
+        android:layout_width="match_parent"
+
+        android:layout_height="wrap_content"
+
+     android:elevation="@dimen/_8sdp"
+        app:cardElevation="4dp"
+        app:cardUseCompatPadding="true"
+
+        android:layout_margin="6dp"
+        app:cardCornerRadius="@dimen/_7sdp"
+        tools:ignore="MissingConstraints">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <!-- Dish Image -->
+            <ImageView
+                android:id="@+id/foodimag"
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                app:srcCompat="@drawable/menu3" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginTop="@dimen/_10sdp"
+
+                android:orientation="vertical"
+                android:padding="8dp">
+
+                <!-- Dish Name -->
+                <TextView
+                    android:id="@+id/foodname"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Dish Name"
+                    android:textSize="18sp"
+                    android:gravity="center"
+                    android:textStyle="bold" />
+
+                <!-- Dish Cost -->
+                <TextView
+                    android:id="@+id/foodquant"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Cost: $10"
+                    android:gravity="center"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <!-- Add and Remove Buttons with Item Count -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center_vertical"
+                android:padding="8dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageButton
+                        android:id="@+id/removeButton"
+                        android:layout_width="30dp"
+                        android:layout_height="27dp"
+android:background="@drawable/greenbuttonshape"
+                        android:src="@drawable/icon_minus"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/foodprice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:paddingLeft="@dimen/_6sdp"
+                        android:paddingRight="@dimen/_6sdp"
+                        android:paddingTop="@dimen/_1sdp"
+                        android:textSize="@dimen/_15sdp" />
+
+                    <ImageButton
+                        android:id="@+id/addButton"
+                        android:layout_width="35dp"
+                        android:layout_height="27dp"
+                        android:text="hel"
+                        android:src="@drawable/icon_plus"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/deleteImageView"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/trash"
+                    android:layout_marginLeft="@dimen/_26sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+           />
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
